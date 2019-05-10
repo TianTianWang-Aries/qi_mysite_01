@@ -9,7 +9,6 @@ app_name = 'blog'
 urlpatterns = [
     path('', views.blog_title, name="blog_title"),
 
-    # re_path此处需要补充content
-    re_path('content/(?P<article_id>\d+)/', views.blog_article, name="blog_detail"),
+    re_path('(?P<article_id>\d+)/', views.blog_article, name="blog_detail"),
 
 ]
